@@ -1,50 +1,57 @@
-Web Markup & Layout/Styling
-- [HTML](https://github.com/bencasalino/Knowledge/wiki/html) |  [CSS](https://github.com/bencasalino/Knowledge/wiki/css) |  [SASS/PostCSS](https://github.com/bencasalino/Knowledge/wiki/css)
-- [Flexbox](https://github.com/bencasalino/Knowledge/wiki/css) | [Grid](https://github.com/bencasalino/Knowledge/wiki/css) |  [Animations](https://github.com/bencasalino/Knowledge/wiki/animations)
+#### Table of Contents
 
-JavaScript
-- [Data Types](https://github.com/bencasalino/Knowledge/wiki/html)
-| [Functions/Arrays/Objects](https://github.com/bencasalino/Knowledge/wiki/html)
-| [Control Flow/Async](https://github.com/bencasalino/Knowledge/wiki/html)
-| [ES6](https://github.com/bencasalino/Knowledge/wiki/html)
+###### :large_blue_diamond: Web Markup & Layout/Styling
 
-Front End Frameworks
-- [MVC](https://github.com/bencasalino/Knowledge/wiki/mvc) | [Vue](https://github.com/bencasalino/Knowledge/wiki/css) |  [React](https://github.com/bencasalino/Knowledge/wiki/css)
+[HTML](https://github.com/bencasalino/Knowledge/wiki/html) |  [CSS](https://github.com/bencasalino/Knowledge/wiki/css) |  [SASS](https://github.com/bencasalino/Knowledge/wiki/sass) |
+[Flexbox](https://github.com/bencasalino/Knowledge/wiki/flexbox) | [Grid](https://github.com/bencasalino/Knowledge/wiki/grid) |  [Animations](https://github.com/bencasalino/Knowledge/wiki/animations)
 
-DOM/API
-- [DOM](https://github.com/bencasalino/Knowledge/wiki/dom) | [JSON](https://github.com/bencasalino/Knowledge/wiki/josn) | [API](https://github.com/bencasalino/Knowledge/wiki/api) | [Express](https://github.com/bencasalino/Knowledge/wiki/josn)
+***
+
+###### :large_orange_diamond: JavaScript
+
+ [Data Types](https://github.com/bencasalino/Knowledge/wiki/js1)
+| [Functions/Arrays/Objects](https://github.com/bencasalino/Knowledge/wiki/js2)
+| [Control Flow/Async](https://github.com/bencasalino/Knowledge/wiki/js3)
+| [ES6](https://github.com/bencasalino/Knowledge/wiki/es6)
+
+###### Front End Frameworks (VueX/Redux/Styled Components)
+
+[MVC](https://github.com/bencasalino/Knowledge/wiki/mvc) | [Vue](https://github.com/bencasalino/Knowledge/wiki/vue) |  [React](https://github.com/bencasalino/Knowledge/wiki/react)
+
+***
+
+######  :beginner: DOM/API | Databases/SQL
+
+[DOM](https://github.com/bencasalino/Knowledge/wiki/dom) | [JSON](https://github.com/bencasalino/Knowledge/wiki/josn) | [API](https://github.com/bencasalino/Knowledge/wiki/api) | [Express](https://github.com/bencasalino/Knowledge/wiki/josn)
 | [Node/NPM](https://github.com/bencasalino/Knowledge/wiki/node)
 
-Databases/SQL
-- [PostgreSQL](https://github.com/bencasalino/Knowledge/wiki/PostgreSQL) | [Knex](https://github.com/bencasalino/Knowledge/wiki/knex)
 
+ [PostgreSQL](https://github.com/bencasalino/Knowledge/wiki/PostgreSQL) | [Knex](https://github.com/bencasalino/Knowledge/wiki/knex)
 
-Testing/TDD
-- [Cypress](https://github.com/bencasalino/Knowledge/wiki/cypress) | [Mocha/Chai/Assert](https://github.com/bencasalino/Knowledge/wiki/cypress)
+***
 
+###### :vertical_traffic_light: Testing/TDD
 
-Debugging/Error Handling/Dev Tools
-- [Debugging](https://github.com/bencasalino/Knowledge/wiki/debugging)
+ [Cypress](https://github.com/bencasalino/Knowledge/wiki/cypress) | [Mocha/Chai/Assert](https://github.com/bencasalino/Knowledge/wiki/cypress)
 
-Reference/Tools/Definitions/Snippets/Boilerplate/Concepts
-- [Reference](https://github.com/bencasalino/Knowledge/wiki/reference)
-- [Client/Server](https://github.com/bencasalino/Knowledge/wiki/decoupled)
-- [OOP/Functional](https://github.com/bencasalino/Knowledge/wiki/patterns)
-- [jQuery](https://github.com/bencasalino/Knowledge/wiki/jQuery)
-- [Data Visualization](https://github.com/bencasalino/Knowledge/wiki/DataVisualization)
+###### :rocket: Hosting/Deployment
+ [Heroku/Firebase](https://github.com/bencasalino/Knowledge/wiki/hosting)
 
-Hosting/Deployment
-- [Heroku/Firebase/](https://github.com/bencasalino/Knowledge/wiki/hosting)
-
-Git/Version Control
-- [Git/Github](https://github.com/bencasalino/Knowledge/wiki/hosting) | [CLI](https://github.com/bencasalino/Knowledge/wiki/hosting)
+###### :recycle: Git/Version Control
+ [Git/Github](https://github.com/bencasalino/Knowledge/wiki/hosting) | [CLI](https://github.com/bencasalino/Knowledge/wiki/git)
 | [VsCode](https://github.com/bencasalino/Knowledge/wiki/vscode)
 
 
+***
 
-VsCode/IDE/Linter/Extensions
+###### :wrench: Reference/Tools
+ [Reference](https://github.com/bencasalino/Knowledge/wiki/reference) | [Client/Server](https://github.com/bencasalino/Knowledge/wiki/decoupled)
+|  [OOP/Functional](https://github.com/bencasalino/Knowledge/wiki/patterns)
 
+###### :construction: Debugging/Error Handling/Dev Tools
+ [Debugging](https://github.com/bencasalino/Knowledge/wiki/debugging)
 
+***
 
-
-
+###### :books: Learning
+ [GraphQL](https://github.com/bencasalino/Knowledge/wiki/graphql) | [D3](https://github.com/bencasalino/Knowledge/wiki/d3) | [P5js](https://github.com/bencasalino/Knowledge/wiki/p5js) | [PostCSS/CSSinJs](https://github.com/bencasalino/Knowledge/wiki/postcss)
