@@ -191,7 +191,7 @@ Note: this is always quickest and most efficient way to access an element since 
 Uses CSS selector syntax that would select one or more elements. This method returns only the **first** of the matching elements.
 
 
-### Selecting multiple elements (known as nodelists)
+### Selecting multiple elements (known as a NodeList)
 > getElementsByClassName()
 Selects one or more elements given the value of their class attribute.
 Note: this method is faster than querySelectorAll().
@@ -211,7 +211,26 @@ firstChild
 lastChild
 
 
-Breaking down all four parts of the DOM selection below:
+Nodelists: When a DOM method **can** return more that one element, it returns a NodeList (even if it only finds one matching element)
+A Nodelist is a collection of element nodes. Each node is given an index number ( a number that starts at 0, just like arrays)
+
+Note: Nodelists look like arrays and are numbered like arrays, but they are not actually arrays, they are a type of object called a **collection**.
+
+
+### Live and Static NodeLists
+There are times when you will want to work with the same selection of elements several times, so the NodeList can be stored in a variable and re-used  (rather than collecting the same elements again).
+
+**Live NodeList**
+When a script updates the page, the NodeList is updated at the same time. All methods starting with **getElementsBy** return a live NodeLists. Note: they are faster to generate than static NodeLists.
+
+
+**Static NodeList**
+When a script updates the page the node list is NOTE updated. **querySelectors** return static NodeLists. They reflect the document WHEN the query was made. If the script changes the content on the page the NodeList is NOT updated to reflect those changes.
+
+
+
+
+###### Breaking down all four parts of the DOM selection method below:
 
 ```
 document.getElementById('one')
@@ -224,3 +243,36 @@ document --> Refers to the document object. You always have to access individual
 method --> The getElementById() method indicates that you want to find the element based upon the value of its ID attribute.
 
 parameter --> The method needs to know the value of the id attribute on the element you want. It is the parameter of the method.
+
+
+### the item() Method
+There are two ways to select an element form a NodeList:
+1. the item() method
+> var firstItem = elements.item(0);
+
+2. array syntax
+> var firstItem = elements[0];
+
+Note: Array syntax is preferred over the item() method because it is faster. Before selecting a node form a NodeList, check that is contains nodes. If you repeatedly use the NodeList, store it in a variable.
+
+
+
+1. Find the element nodes
+```
+var elements = document.getElementsByClassName("soccer"); // finds "soccer" elements
+```
+2. conditional (optional)
+```
+if (elements.length > 2) { // if 3 or more are found
+}
+```
+
+3. Select (inside if statement in this example )
+```
+var el = elements[2] // selects the third element in the NodeList
+```
+
+4. Update/change value (inside if statement in this example)
+```
+el.className = "basketball";
+```
