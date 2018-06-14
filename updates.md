@@ -183,14 +183,25 @@ When people talk about storing elements in variables, they are really storing th
 
 
 ### Selecting an individual element node
-getElementById()
+> getElementById()
+Selects an individual element given the value of its id attribute.
+Note: this is always quickest and most efficient way to access an element since ID's can be repeated.
 
-querySelector()
+> querySelector()
+Uses CSS selector syntax that would select one or more elements. This method returns only the **first** of the matching elements.
+
 
 ### Selecting multiple elements (known as nodelists)
-getElementsByClassName()
-getElementsByTagName()
-querySelectorAll()
+> getElementsByClassName()
+Selects one or more elements given the value of their class attribute.
+Note: this method is faster than querySelectorAll().
+
+> getElementsByTagName()
+Selects ALL elements on the page with a specified tag name.
+Note: this method is faster than querySelectorAll().
+
+> querySelectorAll()
+Uses CSS Selector syntax to select one or more elements and returns all of those matches.
 
 ### Traversing between element nodes
 parentNode
@@ -198,3 +209,18 @@ previousSibling
 nextSibling
 firstChild
 lastChild
+
+
+Breaking down all four parts of the DOM selection below:
+
+```
+document.getElementById('one')
+```
+
+document --> Refers to the document object. You always have to access individual elements via the document object.
+
+. (member operator) --> The dot notation indicates that the method (on the right) is being applied to the node on the left side of the period.
+
+method --> The getElementById() method indicates that you want to find the element based upon the value of its ID attribute.
+
+parameter --> The method needs to know the value of the id attribute on the element you want. It is the parameter of the method.
