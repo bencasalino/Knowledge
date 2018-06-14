@@ -170,3 +170,31 @@ app.get('/monsters/:name', (req, res, next) => {
   res.send(monsters[req.params.name]);
 });
 In this code snippet, a .get() route is defined to match /monsters/:name path. When a GET request arrives for /monsters/hydra, the callback is called. Inside the callback, req.params is an object with the key name and the value hydra, which was present in the actual request path. The appropriate monster is retrieved by its name from the monsters object and sent back the the client.
+
+
+The term **elements** & **node elements** are used interchangeably but when people say the DOM is working with an element it is actually working with a node that __represents__ that element.
+
+
+###### Caching DOM Queries
+Methods that find elements in the DOM tree are called **DOM queries**.
+Note: When you need to work with an element more than once, you should use a variable to store the result of this query. This saves the browser looking through the DOM tree to find the same element(s) again. It is known as **caching** the selection. Programmers would say that the variable stores a "reference" to the object in the DOM tree (it is storing the location of the node.)
+
+When people talk about storing elements in variables, they are really storing the location of the element(s) within the DOM tree in a variable. The properties and methods of that element node work on the variable.
+
+
+### Selecting an individual element node
+getElementById()
+
+querySelector()
+
+### Selecting multiple elements (known as nodelists)
+getElementsByClassName()
+getElementsByTagName()
+querySelectorAll()
+
+### Traversing between element nodes
+parentNode
+previousSibling
+nextSibling
+firstChild
+lastChild
