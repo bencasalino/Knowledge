@@ -1,0 +1,1 @@
+**Salesforce** is an American cloud computing company, known for its customer relationship management (CRM) product. Salesforce CRM platform enables businesses to manage all interactions with the customers and prospects. Salesforce professionals are the individuals who are adept in using Salesforce products for consulting, administration and development.
