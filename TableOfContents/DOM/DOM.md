@@ -1,4 +1,24 @@
 
+
+## Summary
+The Browser represents the page using the DOM tree.
+DOM trees have four types of nodes.
+* document nodes
+* element nodes
+* attribute nodes
+* text nodes
+You can select element nodes by thier **id or class** attributes, by tag name, or using CSS selector syntax.
+
+Whenever a DOM query can retrun more than one node, it always returns a **Nodelist**.
+
+From an element note, you can access and update its content using properties such as **textContent** and **innerHTML** or using DOM manipulation techniques.
+
+An element node can contain multiple text nodes and child elements that are siblings of each other.
+
+In older broswers, implementation of the DOM is inconsistent and a popular reason for the rise of jQuery.
+
+
+
 The term **elements** & **node elements** are used interchangeably but when people say the DOM is working with an element it is actually working with a node that __represents__ that element.
 
 
