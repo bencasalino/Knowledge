@@ -122,7 +122,7 @@ element.addEventListener('event',functionName[, boolean]);
 
 - 'event' --> event to bind node(s) to in quote marks.
 
-- fucntionName --> code, name of the function to call
+- functionName --> code, name of the function to call
 
 - [Boolean] --> "event flow" indicated something called capture and is usually set to false.
 
@@ -133,3 +133,75 @@ elUserName.addEventListener('blur', checkUserName, false);
 ```
 
 ---
+
+##### Using parameters with Event Handlers and Listeners.
+
+**NOTE:** Because you cannot have parentheses after the function na,e in event handlers or listeners, passing arguments requires a workaround.
+
+When the interpreter sees the parentheses after a function call, it runs the code straight away. In in an event **handler**, you want it to wait until the event triggers it.
+
+Therefore, if you need to pass arguments to a function that is called by an event handler or listener, you wrap the function call in an **anonymous function**.
+
+```
+var elUserName = document.getElementById('username');        // get username input
+var elMsg = document.getElementById('feedback);              // get feedback element
+
+
+
+function checkUserName(minLength) {                          // declare the function
+
+  if (elUserName.value.length < minLength) {                 // if user name is too short
+  // set error message
+    elMsg.textContent = "username must be 5 chars or more";  // set message
+  } else {                                                   // otherwise
+    elMsg.innerHTML = "";                                    // clear message
+    }
+}
+
+elUserName.addEventListener('blur', function() {             // when it loses focus
+  checkUserName(5);                                          // pass arguments here
+})
+```
+
+### Event Flow
+
+HTML Elements nest inside other elements. If you hover or click on a link, you will also be hovering or clicking on its parent elements.
+
+**NOTE:** The flow of events on really matters when your code has event handlers on an element **AND** one of its ancestor or descendant selectors.
+
+#### Event Bubbling (default)
+
+The event starts at the **most** specific node and "flows outwards" to the least specific one. THis is the default type of event flow.
+
+#### Event Capturing
+
+The event starts at the **least** specific node and flows inward to the most specific one.
+
+---
+
+## Events Summary
+
+Events are the browser's way of indicating when something has happened (such as when a page has finished loading or a button has been clicked).
+
+Binding is the process of stating which event you are waiting to happen, and which element you are waiting for that event to happen upon.
+
+You can use event delegation to monitor for events that happen on all of the children of an element.
+
+---
+
+#Event Object
+When an event occurs the event object tells you the information about the event and the element it happened upon. When the event object is passed into a function, it is often given the parameter name **e**.
+
+Properties:
+target --> The target of the event.
+type --> The type of event that was fired.
+
+Method:
+preventDefault() --> Cancel the behavior of the event (if it can be cancelled).
+stopPropagation() --> stops the event from bubbling or capturing any further.
+
+### Event Delegation
+
+Creating event listeners for a lot of elements can sloe down a pagem but event flow allows you to listen for an event on a parent element. Because events affect containing elements due to event flow, you CAN place handlers on the containing element and use the "event object's target property" to find which of its children the event happens on.
+
+By attaching an event listener to the containing element, you are only responding to one element (rather than having an event handler on each child element.)
