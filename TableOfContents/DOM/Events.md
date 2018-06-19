@@ -68,6 +68,8 @@ ex: The submit form event of a form cannot trigger one function that checks the 
 3.  Event Listeners - introduced in 2000 and are now the favored way of handling events.
     Syntax is different but a single event listener can trigger multiple functions.
 
+    ***
+
 #### Using DOM Event handlers
 
 1.
@@ -93,4 +95,26 @@ var elUserName - document.getElementById("username"); // get username input
 
 ```
 elUserName.onblur = checkUserName // when it loses focus call checkUserName()
+```
+
+---
+
+#### Using Event Listeners
+
+```
+element.addEventListener('event',functionName[, boolean]);
+```
+
+- element --> DOM element node to target.
+
+- 'event' --> event to bind node(s) to in quote marks.
+
+- fucntionName --> code, name of the function to call
+
+- [Boolean] --> "event flow" indicated something called capture and is usually set to false.
+
+Example Event Listener: (same as above example but step 3 is different)
+
+```
+elUserName.addEventListener('blur', checkUserName, false);
 ```
