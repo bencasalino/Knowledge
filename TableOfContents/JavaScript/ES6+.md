@@ -1,6 +1,6 @@
-# ES6+
-
 Resources:
+
+# ES6+
 
 [ES Examples](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
 
@@ -18,11 +18,10 @@ if (arr.indexOf(2) >= 0) {
 
 //Use
 if(arr.includes(2)) {
-  console.log(true);
 };
 ```
 
----
+## console.log(true);
 
 #### Exponent "infix" operator
 
