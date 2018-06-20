@@ -10,4 +10,4 @@ https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ
 Learn Next:
 https://internetingishard.com/html-and-css/
 
-V
+[Eloquent JS v3](http://eloquentjavascript.net/)
