@@ -27,3 +27,13 @@ Close explorer side window:
 > cmd + |
 
 ---
+
+Add cursor above or below
+
+> cmd + option + up/down
+
+---
+
+Add cursor to end line
+
+> cmd + shift + L

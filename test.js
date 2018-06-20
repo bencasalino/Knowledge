@@ -1,1 +1,0 @@
-var test = "sdas asd sd d  d d ";
