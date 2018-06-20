@@ -1,3 +1,23 @@
+###### Summary:
+
+Objects and arrays (which are a specific kind of object) provide ways to group several values into a single value. Conceptually, this allows us to put a bunch of related things in a bag and run around with the bag, instead of wrapping our arms around all of the individual things and trying to hold on to them separately.
+
+Most values in JavaScript have properties, the exceptions being **null and undefined**.
+
+Properties are accessed using value.prop or value["prop"].
+
+**Objects** tend to use names for their properties and store more or less a fixed set of them.
+
+**Arrays**, on the other hand, usually contain varying amounts of conceptually identical values and use numbers (starting from 0) as the names of their **properties**.
+
+There are some named **properties** in arrays, such as **length** and a number of methods.
+
+**Methods** are functions that live in properties and (usually) act on the value they are a **property** of.
+
+You can iterate over arrays using a special kind of for loop—for (let element of array).
+
+---
+
 **Objects** allow us to group values—including other objects—to build more complex structures.
 
 Properties whose names aren’t valid binding names or valid numbers have to be quoted. (ex: "touched tree")
@@ -94,6 +114,8 @@ The text inside it **CANNOT** be changed. If you have a string that contains "ca
 
 Objects work differently. You **CAN** change their properties, causing a single object value to have different content at different times.
 
+Values of type string, number, and Boolean are not objects, and though the language doesn’t complain if you try to set new properties on them, it doesn’t actually store those properties. As mentioned earlier, such values are immutable and cannot be changed.
+
 When we have two numbers, 120 and 120, we can consider them precisely the same number, whether or not they refer to the same physical bits. With objects, there is a difference between having two references to the same object and having two different objects that contain the same properties.
 
 ```
@@ -165,3 +187,93 @@ console.log(remove(["a", "b", "c", "d", "e"], 2));
 ```
 
 **NOTE:** If you pass concat an argument that is not an array, that value will be added to the new array as if it were a one-element array.
+
+---
+
+#### .split and .join
+
+You can split a string on every occurrence of another string with split and join it again with join.
+
+```
+let sentence = "Secretarybirds specialize in stomping";
+let words = sentence.split(" ");
+console.log(words);
+// → ["Secretarybirds", "specialize", "in", "stomping"]
+console.log(words.join(". "));
+// → Secretarybirds. specialize. in. stomping
+```
+
+---
+
+### Rest parameters and Spread Operator
+
+Rest:
+
+It can be useful for a function to accept any number of arguments. For example, Math.max computes the maximum of all the arguments it is given.
+
+To write such a function, you put three dots before the function’s last parameter, like this:
+
+```
+function max(...numbers) {
+  let result = -Infinity;
+  for (let number of numbers) {
+    if (number > result) result = number;
+  }
+  return result;
+}
+console.log(max(4, 1, 9, -2));
+// → 9
+```
+
+When such a function is called, the rest parameter is bound to an array containing all further arguments. If there are other parameters before it, their values aren’t part of that array. When, as in max, it is the only parameter, it will hold all arguments.
+
+Spread:
+
+You can use a similar three-dot notation to call a function with an array of arguments.
+
+```
+let numbers = [5, 1, 7];
+console.log(max(...numbers));
+// → 7
+```
+
+This “spreads” out the array into the function call, passing its elements as separate arguments. It is possible to include an array like that along with other arguments, as in max(9, ...numbers, 2).
+
+Square bracket array notation similarly allows the triple-dot operator to spread another array into the new array.
+
+```
+let words = ["never", "fully"];
+console.log(["will", ...words, "understand"]);
+// → ["will", "never", "fully", "understand"]
+```
+
+### Math Object
+
+The Math object is used as a container to group a bunch of related functionality. There is only one Math object, and it is almost never useful as a value. Rather, it provides a **namespace** so that all these functions and values do not have to be global bindings.
+
+Having too many global bindings “pollutes” the **namespace**. The more names have been taken, the more likely you are to accidentally overwrite the value of some existing binding.
+
+For example, it’s not unlikely to want to name something max in one of your programs. Since JavaScript’s built-in max function is tucked safely inside the Math object, we don’t have to worry about overwriting it.
+
+Many languages will stop you, or at least warn you, when you are defining a binding with a name that is already taken. JavaScript does this for bindings you declared with let or const but—perversely—not for standard bindings nor for bindings declared with var or function.
+
+Common:
+
+```
+Math.floor()
+Math.ceil()
+Math.round()
+Math.min()
+Math.max()
+Math.random()
+```
+
+Less Common:
+
+```
+Math.sqrt()
+Math.PI()
+Math.cos,sine,tan etc.
+```
+
+---
