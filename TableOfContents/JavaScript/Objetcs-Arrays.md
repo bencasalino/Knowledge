@@ -84,4 +84,84 @@ console.log(objectA);
 // → {a: 1, b: 3, c: 4}
 ```
 
+---
+
 #### Mutability
+
+We saw that object values can be modified. The types of values discussed in earlier chapters, such as numbers, strings, and Booleans, are all **immutable**, it is impossible to change values of those types. You can combine them and derive new values from them, but when you take a specific string value, that value will always remain the same.
+
+The text inside it **CANNOT** be changed. If you have a string that contains "cat", it is not possible for other code to change a character in your string to make it spell "rat".
+
+Objects work differently. You **CAN** change their properties, causing a single object value to have different content at different times.
+
+When we have two numbers, 120 and 120, we can consider them precisely the same number, whether or not they refer to the same physical bits. With objects, there is a difference between having two references to the same object and having two different objects that contain the same properties.
+
+```
+let object1 = {value: 10};
+let object2 = object1;
+let object3 = {value: 10};
+
+console.log(object1 == object2);
+// → true
+console.log(object1 == object3);
+// → false
+
+object1.value = 15;
+console.log(object2.value);
+// → 15
+console.log(object3.value);
+// → 10
+```
+
+The object1 and object2 bindings grasp the same object, which is why changing object1 also changes the value of object2. They are said to have the same identity. The binding object3 points to a different object, which initially contains the same properties as object1 but lives a separate life.
+
+????
+
+```
+let journal = [];
+
+function addEntry(events, squirrel) {
+  journal.push({events, squirrel});
+}
+```
+
+Note that the object added to the journal looks a little odd. Instead of declaring properties like events: events, it just gives a property name. This is shorthand that means the same thing—if a property name in brace notation isn’t followed by a value, its value is taken from the binding with the same name.
+
+```
+addEntry(["work", "touched tree", "pizza", "running",
+          "television"], false);
+addEntry(["work", "ice cream", "cauliflower", "lasagna",
+          "touched tree", "brushed teeth"], false);
+addEntry(["weekend", "cycling", "break", "peanuts",
+          "beer"], true);
+```
+
+---
+
+##### indexOf & lastindexOf method?
+
+Both indexOf and lastIndexOf take an optional second argument that indicates where to start searching.
+
+```
+console.log([1, 2, 3, 2, 1].indexOf(2));
+// → 1
+console.log([1, 2, 3, 2, 1].lastIndexOf(2));
+// → 3
+```
+
+---
+
+##### .concat method?
+
+The concat method can be used to glue arrays together to create a new array, similar to what the + operator does for strings. The following example shows both concat and slice in action. It takes an array and an index, and it returns a new array that is a copy of the original array with the element at the given index removed.
+
+```
+function remove(array, index) {
+  return array.slice(0, index)
+    .concat(array.slice(index + 1));
+}
+console.log(remove(["a", "b", "c", "d", "e"], 2));
+// → ["a", "b", "d", "e"]
+```
+
+**NOTE:** If you pass concat an argument that is not an array, that value will be added to the new array as if it were a one-element array.
