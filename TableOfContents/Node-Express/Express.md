@@ -1,74 +1,7 @@
-June
-6/11 - Added Normalize CSS resets , border box sizing more css
-6/12 - VsCode Updates
-
-
-
-
-Run-time vs Write-time (python vs c++)
-Compiled languages vs interpreted
-Strongly Typed vs loosely typed
-Type conversion vs type coercion
-procedural vs OOP
-
-
-
-
-VsCode Spell Checker Extension
-
-Use CMD + . when selected on a word to reveal suggestions.
-
-
-
-
-
-"I'm coding like a champ".length > 10;
-Checks if the string is greater than a length of 10. via boolean
-answer: true
-
-The more you know:
-You are doing what's called "debugging," a term popularized by Grace Hopper when she literally removed a moth from her computer.
-
-
-<a name="content"></a> ==$0
-When inspecting an element in the browser, the ==$0 can be used as a reference to that element by typing $0 in the same console.
-Selecting the element is what sets it to $0. Note: in React for example we can use $r.
-$0
-<a name=​"content">​</a>​
-
-Can also be chained.
-
-$0.name
-"content"
-
-To see all properties available on a selected DOM node.
-
-console.dir($0)
-
-
-
-DOM
-grabbing InnerHTML vs innerText
-
-innerHTML -->  <span> test </span>
-innerText --> test
-
-
-
-Substring Selection:
-console.log("January".substring(0, 3));
-console.log("Melbourne is great".substring(0, 12));
-console.log("Hamburgers".substring(3,10));
-
-Returns:
-Jan
-Melbourne is
-burgers
-
-
-
 ## Express:
+
 Express is a Node module, so in order to use it, we will need to import it into our program file. To create a server, the imported express function must be invoked.
+
 ```
 const express = require('express');
 const app = express();
@@ -89,8 +22,8 @@ app.listen(PORT, () => {
 });
 ```
 
-
 Simple Express Example:
+
 ```
 // Import the express library here
 const express = require('express');
@@ -107,8 +40,8 @@ app.listen(PORT, () => {
 });
 ```
 
-
 # Routes with Express
+
 Once the Express server is listening, it can respond to any and all requests.
 But how does it know what to do with these requests?
 To tell our server how to deal with any given request, we register a series of routes.
@@ -121,8 +54,7 @@ For example, if your server receives a GET request at '/monsters', we will use a
 
 The HTTP verb is always included in the request, and it is one of a finite number of options used to specify expected functionality.
 
-Example:  GET requests are used for retrieving resources from a server.
-
+Example: GET requests are used for retrieving resources from a server.
 
 Express uses app.get() to register routes to match GET requests.
 
@@ -134,10 +66,10 @@ app.get('/moods', (req, res, next) => {
   // Here we would send back the moods array in response
 });
 ```
+
 The route above will match any GET request to '/moods' and call the callback function, passing in two objects as the first two arguments. These objects represent the request sent to the server and the response that the Express server should eventually send to the client.
 
 If no routes are matched on a client request, the Express server will handle sending a 404 Not Found response to the client.
-
 
 Sending A Response
 HTTP follows a one request-one response cycle. Each client expects exactly one response per request, and each server should only send a single response back to the client per request.
@@ -157,7 +89,6 @@ In this example, a GET /monsters request will match the route, Express will call
 Note:
 In addition to .send(), .json() can be used to explicitly send JSON-formatted responses. .json() sends any JavaScript object passed into it.
 
-
 Getting A Single Expression
 Routes become much more powerful when they can be used dynamically. Express servers provide this functionality with named route parameters. Parameters are route path segments that begin with : in their Express route definitions. They act as wildcards, matching any text at that path segment. For example /monsters/:id will match both/monsters/1 and /monsters/45.
 
@@ -166,8 +97,7 @@ Express parses any parameters, extracts their actual values, and attaches them a
 const monsters = { hydra: { height: 3, age: 4 }, dragon: { height: 200, age: 350 } };
 // GET /monsters/hydra
 app.get('/monsters/:name', (req, res, next) => {
-  console.log(req.params) // { name: 'hydra' };
-  res.send(monsters[req.params.name]);
+console.log(req.params) // { name: 'hydra' };
+res.send(monsters[req.params.name]);
 });
 In this code snippet, a .get() route is defined to match /monsters/:name path. When a GET request arrives for /monsters/hydra, the callback is called. Inside the callback, req.params is an object with the key name and the value hydra, which was present in the actual request path. The appropriate monster is retrieved by its name from the monsters object and sent back the the client.
-
