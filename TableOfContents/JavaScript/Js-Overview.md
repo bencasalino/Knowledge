@@ -72,3 +72,114 @@ for (let char of roseDragon) {
 // → 🌹
 // → 🐉
 ```
+
+---
+
+Example:
+
+```
+a = b * 2;
+```
+
+- 2 is a **literal value expression**
+- b is a **variable expression**, which means to retrieve its current value.
+- b \* 2 is an **arithmetic expression**, which means to do the multiplication.
+- a = b _ 2 is an **assignment expression**, which means to assign the result of the b _ 2 expression to the variable.
+
+Statement
+
+> a group of words, numbers and operators that preform a specific task.
+
+Variables
+
+> simple boxes/containers to store things in.
+
+Literal Value
+
+> Ex: the 2 value itself, called a literal value, because it stands alone without being stored in a variable.
+
+Operators
+
+> they preform actions with the values and variables such as assignment and mathematic multiplication.
+
+Expressions
+
+> Statements are made up of one or more expressions.
+
+Call Expression
+
+> when the entire statement is the function call expression itself. ex: alert ("hi");
+
+---
+
+Interpreter and Compiler
+
+> Special utility that is used to translate the code into commands that the computer can understand.
+
+Compiler
+
+> For some languages, the translation is done ahead of time, called compiling the code. So when the program runs later, whats running is actually compiled computer instructions ready to go.
+
+Interpreter
+
+> JS is an interpreter language, because your JS source code is processed each time it's run. But technically the JS engine actually compiles the program on the fly then immediately runs he complied code.
+
+---
+
+## Question: Similar to pre-processing like **SASS** or transpile the code like **Babel**?
+
+#Operators
+
+Assignment
+
+> =, as in a = 2
+
+Math
+
+Compound Assignment
+
+> a += 2 is the same as a = a + 2
+
+Increment/Decrement
+
+Equality
+
+Comparison
+
+Logical
+
+Object Property Access
+
+> . --> as in console . log()
+
+**NOTE:** Objects are values that hold other calues at specific named locations called **properties**.
+
+**obj.a** --> means the object value called obj with a property name of a. Properties can alternatively be accessed as **obj["a"]**
+
+---
+
+### Values and Types
+
+Types
+
+>
+
+Primitives
+
+>
+
+Literals
+
+>
+
+---
+
+#### Type conversion/coercion & implicit/explicit
+
+Loosely Typed vs Strong Typed Languages
+
+Dynamic Typing / Weak Typing / Static Typing
+
+Type Enforcement
+
+---

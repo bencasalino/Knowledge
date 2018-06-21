@@ -125,6 +125,10 @@ The standard array method reduce, which of course corresponds to this function, 
 - you could essential run a map or filter with the reduce native array method
 - could not necessarily return a new array, could be object, string, number etc.
 
+**NOTE:** Concept of Accumulator:
+
+- starting point and ending point of (return value) of our reduce function. reduce is essentially returning the accumulator.
+
 ```
 function reduce(array, combine, start) {
   let current = start;
@@ -136,6 +140,23 @@ function reduce(array, combine, start) {
 
 console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0));
 // → 10
+```
+
+```
+const numbArray = [2, 5, 9];
+
+function sumNumbArray(array) {
+  let sum = array.reduce(function(accumulator, currentValue) {
+    // logic
+    // accumulator = 0
+    // currentValue = 1 or [i]
+    // add them together
+    return accumulator + currentValue;
+  }, 0)
+  return sum;
+}
+
+console.log(sumNumbArray(numbArray));
 ```
 
 ---
