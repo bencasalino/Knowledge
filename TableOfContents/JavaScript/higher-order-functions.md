@@ -1,4 +1,4 @@
-## First-Class Functions / Higher Order Functions
+## First-Class Functions / Higher Order Functions / Native Array Methods
 
 Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions. The term comes from mathematics, where the distinction between functions and other values is taken more seriously.
 
@@ -36,6 +36,12 @@ Filtering arrays
 
 To find the scripts in the data set that are still in use, the following function might be helpful. It filters out the elements in an array that don’t pass a test.
 
+### Use cases for filter
+
+- returns a new array that only includes things that PASS our "test"
+- checks every item/index in an array against a condition.
+- new array will be of EQUAL or LESSER length than the input.
+
 ```
 function filter(array, test) {
   let passed = [];
@@ -54,7 +60,7 @@ Note how the filter function, rather than deleting elements from the existing ar
 
 **NOTE:** It does not modify the array it is given.
 
-Like forEach, filter is a standard array method. The example defined in the function only to show what it does internally.
+Like forEach, filter is a standard array method. The example defined in the function only to show what it does internally. It does not return a new array it just replaces or updates the current array. For each eseentially replaces the for loop with different syntax.
 
 ---
 
@@ -64,6 +70,14 @@ The map method transforms an array by applying a function to all of its elements
 
 The new array will have the same length as the input array, but its content will have been mapped to a new form by the function.
 
+### Use cases for map:
+
+- Takes an array of data and transform each index in the same way
+- When using push, pop etc. it modifies the current array, when using map it returns a **new** array.
+- often used to reformat or clean up data
+- ALWAYS returns an array of the same length.
+- MUST include a return statement.
+
 ```
 function map(array, transform) {
   let mapped = [];
@@ -72,6 +86,24 @@ function map(array, transform) {
   }
   return mapped;
 }
+```
+
+Example:
+
+```
+// define the data
+const numberArray = [2, 4, 5];
+
+// define the function that will be mapped
+const doubleArray = numberArray.map(double);
+
+// this is what map will do
+function double(number) {
+  return number * 2;
+}
+
+//display results
+console.log(doubleArray);
 ```
 
 ---
@@ -85,6 +117,13 @@ The higher-order operation that represents this pattern is called reduce (someti
 The parameters to reduce are, apart from the array, a combining function and a start value. This function is a little less straightforward than filter and map.
 
 The standard array method reduce, which of course corresponds to this function, has an added convenience. If your array contains at least one element, you are allowed to leave off the start argument. The method will take the first element of the array as its start value and start reducing at the second element.
+
+### Use cases for reduce:
+
+- takes all items in an array and reduces to a single value.
+- swiss army knife of native array methods.
+- you could essential run a map or filter with the reduce native array method
+- could not necessarily return a new array, could be object, string, number etc.
 
 ```
 function reduce(array, combine, start) {

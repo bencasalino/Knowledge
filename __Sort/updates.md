@@ -52,3 +52,5 @@ Returns:
 Jan
 Melbourne is
 burgers
+
+updates notes on how module exports works with data
