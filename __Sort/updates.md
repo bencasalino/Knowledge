@@ -1,3 +1,6 @@
+https://docs.google.com/document/d/1Se-JP51ZAttkX2NFQzR-vtlD3cJakGLQEyUKWTNTP_0/edit
+Old Galvanize Notes - sort these frist ( notes from eloquent js in here too! )
+
 June
 6/11 - Added Normalize CSS resets , border box sizing more css
 6/12 - VsCode Updates
