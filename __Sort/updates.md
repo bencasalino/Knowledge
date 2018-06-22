@@ -1,19 +1,14 @@
 https://docs.google.com/document/d/1Se-JP51ZAttkX2NFQzR-vtlD3cJakGLQEyUKWTNTP_0/edit
 Old Galvanize Notes - sort these frist ( notes from eloquent js in here too! )
 
-June
-6/11 - Added Normalize CSS resets , border box sizing more css
-6/12 - VsCode Updates
-
+define:
 Run-time vs Write-time (python vs c++)
 Compiled languages vs interpreted
 Strongly Typed vs loosely typed
 Type conversion vs type coercion
 procedural vs OOP
 
-VsCode Spell Checker Extension
-
-Use CMD + . when selected on a word to reveal suggestions.
+updates notes on how module exports works with data
 
 "I'm coding like a champ".length > 10;
 Checks if the string is greater than a length of 10. via boolean
@@ -52,5 +47,3 @@ Returns:
 Jan
 Melbourne is
 burgers
-
-updates notes on how module exports works with data
