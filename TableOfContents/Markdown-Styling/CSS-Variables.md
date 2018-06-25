@@ -81,3 +81,16 @@ The example below demonstrates how easy it is to dynamically manipulate properti
   font-size: var(--main-text);
 }
 ```
+
+The var() function has a second parameter, which can be used to supply a fallback value if the custom property fails:
+
+```
+	width: var(--custom-width, 20%);
+```
+
+It is possible to nest custom properties:
+
+```
+--base-color: #f93ce9;
+--background-gradient: linear-gradient(to top, var(--base-color), #444);
+```
