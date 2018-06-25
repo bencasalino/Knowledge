@@ -81,3 +81,71 @@ The main motivation to add this is to allow shallow copying / cloning an object 
 
 Rest operator vs Spread operator
 Spread properties also look just like rest properties with three dots ... but the difference is that you use spread to create (restructure) new objects.
+
+---
+
+### Ternary Operator
+
+Another form of conditional in JavaScript is the "conditional operator," often called the "ternary operator." It's like a more concise form of a single if..else statement, such as:
+
+```
+var a = 42;
+
+var b = (a > 41) ? "hello" : "world";
+
+// similar to:
+
+// if (a > 41) {
+// b = "hello";
+// }
+// else {
+// b = "world";
+// }
+```
+
+---
+
+###Strict Mode
+ES5 added a "strict mode" to the language, which tightens the rules for certain behaviors. Generally, these restrictions are seen as keeping the code to a safer and more appropriate set of guidelines. Also, adhering to strict mode makes your code generally more optimizable by the engine. Strict mode is a big win for code, and you should use it for all your programs.
+
+You can opt in to strict mode for an individual function, or an entire file, depending on where you put the strict mode pragma:
+
+```
+function foo() {
+	"use strict";
+
+	// this code is strict mode
+
+	function bar() {
+		// this code is strict mode
+	}
+}
+// this code is not strict mode // oustide the block scope
+```
+
+```
+Compare that to:
+
+"use strict";
+
+function foo() {
+	// this code is strict mode
+
+	function bar() {
+		// this code is strict mode
+	}
+}
+
+// this code IS strict mode
+```
+
+One key difference (improvement!) with strict mode is disallowing the implicit auto-global variable declaration from omitting the var:
+
+```
+function foo() {
+"use strict"; // turn on strict mode
+a = 1; // `var` missing, ReferenceError
+}
+
+foo();
+```
