@@ -1,4 +1,4 @@
-#CSS SSpecificity Rules
+#CSS Specificity Rules
 
 The rules to win the specificity wars are:
 
@@ -11,7 +11,8 @@ The rules to win the specificity wars are:
 
 -Although !important has nothing to do with the specificity of a selector, it is good to know that a declaration using !important overrides any normal declaration. When two conflicting declarations have the !important keyword, the declaration with a greater specificity wins.
 
----
+[Specificity Calculator](http://specificity.keegan.st/)
+[CSS Units Demo](https://alberictrancart.github.io/css-units-demo/)
 
 #BEM
 
