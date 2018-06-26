@@ -7,21 +7,29 @@ DOM trees have four types of nodes.
 * element nodes
 * attribute nodes
 * text nodes
-You can select element nodes by thier **id or class** attributes, by tag name, or using CSS selector syntax.
+You can select element nodes by their **id or class** attributes, by tag name, or using CSS selector syntax.
 
-Whenever a DOM query can retrun more than one node, it always returns a **Nodelist**.
+Whenever a DOM query can return more than one node, it always returns a **Nodelist**.
 
 From an element note, you can access and update its content using properties such as **textContent** and **innerHTML** or using DOM manipulation techniques.
 
 An element node can contain multiple text nodes and child elements that are siblings of each other.
 
-In older broswers, implementation of the DOM is inconsistent and a popular reason for the rise of jQuery.
-
-
+In older browsers, implementation of the DOM is inconsistent and a popular reason for the rise of jQuery.
 
 The term **elements** & **node elements** are used interchangeably but when people say the DOM is working with an element it is actually working with a node that __represents__ that element.
 
+```
+//select
+const selectAll = document.querySelector("body");
+// create
+var canvasDiv = document.createElement("div");
+// add class name
+canvasDiv.classList.add("outerCanvas");
+//append
+selectAll.appendChild(canvasDiv);
 
+```
 ### Caching DOM Queries
 Methods that find elements in the DOM tree are called **DOM queries**.
 
