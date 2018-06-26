@@ -94,3 +94,37 @@ foo();
 ```
 
 As you can see, listing the (function IIFE(){ .. }) before its executing () is essentially the same as including foo before its executing (); in both cases, the function reference is executed with () immediately after it.
+
+---
+
+### Declaration vs Expression
+
+A Function Declaration defines a named function variable **WITHOUT** requiring variable assignment.
+
+Function Declarations occur as standalone constructs and cannot be nested within non-function blocks. It’s helpful to think of them as siblings of Variable Declarations. Just as Variable Declarations must start with “var”, Function Declarations must begin with “function”. The function name is visible within it’s scope and the scope of it’s parent (which is good because otherwise it would be unreachable)
+
+```
+function bar() {
+    return 3;
+}
+
+bar() //3
+bar  //function
+```
+
+```
+//anonymous function expression
+var a = function() {
+    return 3;
+}
+
+//named function expression
+var a = function bar() {
+    return 3;
+}
+
+//self invoking function expression
+(function sayHello() {
+    alert("hello!");
+})();
+```
