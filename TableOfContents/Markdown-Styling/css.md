@@ -1,3 +1,16 @@
+#CSS SSpecificity Rules
+
+The rules to win the specificity wars are:
+
+-Inline style beats ID selectors. ID selectors are more specific than classes and attributes (::hover, ::before…). Classes win over element selectors.
+
+-A more specific selector beats any number of less specific selectors. For instance, .list is more specific than div ul li.
+
+-Increasing the number of selectors will result in higher specificity. .list.link is more specific than .list and .link.
+-If two selectors have the same specificity, the last rule read by the browser wins.
+
+-Although !important has nothing to do with the specificity of a selector, it is good to know that a declaration using !important overrides any normal declaration. When two conflicting declarations have the !important keyword, the declaration with a greater specificity wins.
+
 ---
 
 #BEM
