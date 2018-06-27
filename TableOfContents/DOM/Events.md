@@ -147,7 +147,6 @@ var elUserName = document.getElementById('username');        // get username inp
 var elMsg = document.getElementById('feedback);              // get feedback element
 
 
-
 function checkUserName(minLength) {                          // declare the function
 
   if (elUserName.value.length < minLength) {                 // if user name is too short
