@@ -396,3 +396,24 @@ Thirdly, there're modifiers, they're used to make small change to existing eleme
 The syntax for modifier is : block\_\_element--modifier
 
 ---
+
+List of CSS Vendor Prefixes:
+
+fixes.md
+-ms- Microsoft
+mso- Microsoft Office
+-moz- Mozilla Foundation (Gecko-based browsers)
+-o-, -xv- Opera Software
+-atsc- Advanced Television Standards Committee
+-wap- The WAP Forum
+-webkit- Safari, Chrome (and other WebKit-based browsers)
+-khtml- Konqueror browser
+-apple- Webkit supports properties using the -apple- prefixes as well
+prince- YesLogic
+-ah- Antenna House
+-hp- Hewlett Packard
+-ro- Real Objects
+-rim- Research In Motion
+-tc- Tall Components
+
+---
