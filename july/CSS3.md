@@ -317,8 +317,6 @@ pointer, any-pointer, hover, any-hover, overflow-line, overflow-block, update.
 
 ---
 
----
-
 ### Types
 
 - `all`
