@@ -36,7 +36,7 @@
 
 ## Text
 
-- `p`
+- `p` - paragraph tag
 - `em` - Emphasis
 - `strong` - Strong emphasis
 - `b` - Different, no emphasis, eg. product names or keywords
@@ -45,9 +45,9 @@
 - `mark` - Highlighted
 - `hr` - Thematic break between paragraphs
 - `wbr` - Word break opportunity
-- `pre`
-- `br`
-- `cite`
+- `pre` -
+- `br` - line break tag
+- `cite` -
 - `code` - Code snippet
 - `kybd` - Inline simulated user-input
 - `samp` - Sample computer output
@@ -55,18 +55,18 @@
 - `q` - Inline quotation
 - `blockquote`
 - `data` - Value with a machine-readable value, eg. a UPC
-- `a`
+- `a` - anchor tag
 - `abbr` - Abbreviation, use “title” attribute for full word
 - `small` - Side comments and fine print, eg. legal
 - `sub` - Subscript, eg. for math
 - `sup` - Superscript, eg. for math
 - `del` - Deleted text from an edit
 - `ins` - Inserted text from an edit
-- `time`
+- `time` - time type tag
 - `address` - Contact information for an article
-- `ul`
-- `ol`
-- `li`
+- `ul` - unordered list
+- `ol` - ordered list
+- `li` - list tag
 - `details` - Hideable
 - `summary` - Header for details tag
 
@@ -74,19 +74,19 @@
 
 - `map` - Image map
 - `area` - Hotspot inside a map
-- `audio`
-- `video`
+- `audio` - audio type tag
+- `video` - video type tag
 - `track` - Defines captioning for audio and video
 - `source` - Asset for audio or video
 - `figure` - Wraps an image for markup
-- `img`
+- `img` - image tag
 - `figcaption` - Caption a figure
 
 ## Tables
 
-- `table`
+- `table` - table tag
 - `caption` - Title of a table, goes right after table
-- `tbody`
+- `tbody` - table body
 - `tr` - table row
 - `td` - table data
 - `th` - Header for a group of cells, defined by scope and headers
