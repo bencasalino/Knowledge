@@ -194,13 +194,13 @@ What doesn't inherit:
 
 ### Text
 
-- `text-transform: uppercase | lowercase | none`
-- `text-shadow: right down blue color`
-- `text-align: left | right | justify | center`
+- `text-transform: uppercase | lowercase | none` -
+- `text-shadow: right down blue color` -
+- `text-align: left | right | justify | center` -
 - `text-indent: 5rem` (first line)
-- `line-height`
-- `letter-spacing`
-- `word-spacing`
+- `line-height` -
+- `letter-spacing` -
+- `word-spacing` -
 
 ## Colors
 
@@ -319,19 +319,19 @@ pointer, any-pointer, hover, any-hover, overflow-line, overflow-block, update.
 
 ### Types
 
-- `all`
-- `print`
-- `screen`
-- `speech`
+- `all` -
+- `print` -
+- `screen` -
+- `speech` -
 
 ### Features
 
-- `aspect-ratio (min, max)`
+- `aspect-ratio (min, max)` -
 - `color (min, max)` (number of color bits)
 - `color-index (min, max)` (number of colors)
 - `device-aspect-ratio (min, max)` (written as 3/2)
-- `device-height (min, max)`
-- `device-width (min, max)`
+- `device-height (min, max)` -
+- `device-width (min, max)` -
 - `grid` (vs. bitmap, eg TTY)
 - `height (min, max)` (rendering area, not device)
 - `monochrome (min, max)` (bits per pixel on a monochrome device)
@@ -342,9 +342,9 @@ pointer, any-pointer, hover, any-hover, overflow-line, overflow-block, update.
 
 ### Operators
 
-- `and`
+- `and` -
 - Comma-separated lists (`or`)
-- `not`
+- `not` -
 - `only` (inlined, used to prevent loading a responsive stylesheet in an old browser)
 
 ## Responsive Design
