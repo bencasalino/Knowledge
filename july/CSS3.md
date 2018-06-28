@@ -66,6 +66,8 @@ What doesn't inherit:
 - Background colors
 - Borders
 
+---
+
 ### Specificity
 
 - Tags = 1 point
@@ -82,6 +84,8 @@ What doesn't inherit:
 - `!important` overrides the score
 - Internal stylesheets beat external stylesheets
 - Reset browser stylesheets for consistency
+
+---
 
 ## Transforms
 
@@ -157,14 +161,14 @@ What doesn't inherit:
 ### Box Model Properties
 
 - `border: width style color`
-  - Styles: `solid | dotted | dashed | double | groove | ridge | inset | outset | none | hidden`
-  - `border-radius: top-left top-right bottom-right bottom-left`
+  - Styles: `solid | dotted | dashed | double | groove | ridge | inset | outset | none | hidden` -
+  - `border-radius: top-left top-right bottom-right bottom-left` -
     - Can do `height / width` for elliptical shape
-- `box-shadow: h-offset v-offset radius spread color`
+- `box-shadow: h-offset v-offset radius spread color` -
 - `box-sizing: content-box | padding-box | border-box` (what do h/w refer to)
-- `overflow: visible | scroll | auto | hidden`
-- `height` / `width`
-- `min-height` / `max-height`
+- `overflow: visible | scroll | auto | hidden` -
+- `height` / `width` -
+- `min-height` / `max-height` -
 
 ---
 
@@ -180,6 +184,8 @@ What doesn't inherit:
     font-style: normal;
 }
 ```
+
+List out all auto-prefixes:
 
 ### Fonts
 
