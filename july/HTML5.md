@@ -1,11 +1,13 @@
+# HTML5 Notes
+
 ## Meta
 
 - `base` - Base URL for all relative URLs
-- `head`
-- `link`
-- `meta`
-- `style`
-- `title`
+- `head` - tag for all relevant header information
+- `link` - for linking local or external css stylesheets
+- `meta` - meta info og tags etc.
+- `style` - link for internal css stylesheets
+- `title` - title tag that appears at top of browser
 
 ## Structural
 
@@ -14,22 +16,22 @@
 - `main` - Primary site content
 - `section` - Group of content with a heading
 - `article` - Independently redistributable content with a heading
-- `aside`
+- `aside` -
 - `footer` - Footer for its parent’s content
-- `div`
-- `span`
+- `div` -
+- `span` -
 - `h1`-`h6`
-- `ul`
-- `ol`
-- `li`
+- `ul` -
+- `ol` -
+- `li` -
 - `dl` - Description list, key-value pairs
 - `dt` - Term
 - `dd` - Description
 
 ## Application
 
-- `dialog`
-- `menu`
+- `dialog` -
+- `menu` -
 - `menuitem` - Command invoked from a menu
 - `meter` - Scalar measurement with a range
 - `progress`
@@ -97,41 +99,40 @@
 
 ## Form Helpers
 
-- `form`
-- `input`
-- `output`
+- `form` -
+- `input` -
+- `output` -
 - `keygen` - Sets up public/private key with server
-- `button`
+- `button` -
 - `fieldset` - Group of controls and labels
 - `legend` - Caption for a fieldset
-- `form`
 - `datalist` - Has option tags for an input list
-- `select`
+- `select` -
 - `optgroup` - Group of options in a select element
-- `option`
-- `textarea`
+- `option` -
+- `textarea` -
 
 ## Input Types
 
-- `text`
-- `color`
-- `date`
-- `datetime`
-- `datetime-local`
-- `email`
-- `month`
-- `number`
-- `range`
-- `search`
-- `tel`
-- `time`
-- `url`
-- `week`
+- `text` -
+- `color` -
+- `date` -
+- `datetime` -
+- `datetime-local` -
+- `email` -
+- `month` -
+- `number` -
+- `range` -
+- `search` -
+- `tel` -
+- `time` -
+- `url` -
+- `week` -
 
 # Input Attributes
 
-- `accept="audio/*"`
-- `autocomplete="on"`
+- `accept="audio/*"` -
+- `autocomplete="on"` -
 - `alt="alt-text"` - Only for image types
 - `autofocus="autofocus"` - Gets focus when page loads
 - `form="id"` - Form the input belongs to
@@ -143,10 +144,10 @@
 - `height="100px"` - Only for image type
 - `width="100px"` - Only for image type
 - `list="datalist-id"` - Refers to a datalist element that has predefined options for the input
-- `min="5"`
-- `max="7"`
-- `maxlength="3"`
-- `multiple="multiple"`
+- `min="5"` -
+- `max="7"` -
+- `maxlength="3"` -
+- `multiple="multiple"` -
 - `pattern="regexp"` - Validates the input
 - `placeholder="text"` - Hint
 - `required="require"` - Must be filled out before submitting
@@ -154,4 +155,6 @@
 - `size="3"` - Width of input element
 - `src="u/r/l"` - For image type that will be used as a submit button
 - `step="2"` - Intervals for a numeric input
-- `disabled="disabled"`
+- `disabled="disabled"` -
+
+---
