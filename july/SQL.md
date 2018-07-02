@@ -27,15 +27,25 @@ Semicolon usage--> Some database systems require a semicolon at the end of each 
 ---
 
 SELECT - extracts data from a database
+
 UPDATE - updates data in a database
+
 DELETE - deleted data from a database
+
 INSERT INTO - inserts new data into a database
+
 CREATE DATABASE - creates a new database
+
 ALTER DATABASE - modifies a database
+
 CREATE TABLE - creates a new table
+
 ALTER TABLE - modifies a table
+
 DROP TABLE - deletes a table
+
 CREATE INDEX - created an index (search key)
+
 DROP INDEX - deletes an index
 
 ---
@@ -277,18 +287,72 @@ There are two wildcards used in conjunction with the LIKE operator:
 ### LIKE Operator Description
 
 WHERE CustomerName LIKE 'a%' - Finds any values that start with "a"
+
 WHERE CustomerName LIKE '%a' - Finds any values that end with "a"
+
 WHERE CustomerName LIKE '%or%' - Finds any values that have "or" in any position
-WHERE CustomerName LIKE '_r%' - Finds any values that have "r" in the second position
-WHERE CustomerName LIKE 'a_%\_%' - Finds any values that start with "a" and are at least 3 characters in length
+
+WHERE CustomerName LIKE '\_r%' - Finds any values that have "r" in the second position
+
+WHERE CustomerName LIKE 'a\_%\_%' - Finds any values that start with "a" and are at least 3 characters in length
+
 WHERE ContactName LIKE 'a%o' - Finds any values that start with "a" and ends with "o"
 
 ---
 
-### SQL IN Operator
+### SQL IN and BETWEEN Operator
 
 The IN operator allows you to specify multiple values in a WHERE clause.
 
 The IN operator is a shorthand for multiple OR conditions.
 
+```
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+```
+
 ---
+
+### SQL Aliases
+
+SQL aliases are used to give a table, or a column in a table, a temporary name.
+
+Aliases are often used to make column names more readable.
+
+An alias only exists for the duration of the query.
+
+Aliases can be useful when:
+
+There are more than one table involved in a query
+Functions are used in the query
+Column names are big or not very readable
+Two or more columns are combined together
+
+---
+
+### SQL Comments
+
+Comments are used to explain sections of SQL statements, or to prevent execution of SQL statements.
+
+Single line comments start with --.
+
+Any text between -- and the end of the line will be ignored (will not be executed).
+
+The following example uses a single-line comment as an explanation:
+
+Example
+
+```
+--Select all:
+SELECT * FROM Customers;
+```
+
+---
+
+### Built in MySQL Functions list
+
+[LIST](https://www.w3schools.com/sql/sql_ref_mysql.asp)
+
+[SQL DATA TYPES](https://www.w3schools.com/sql/sql_datatypes.asp)
+
+[SQL Quick Ref](https://www.w3schools.com/sql/sql_quickref.asp)
