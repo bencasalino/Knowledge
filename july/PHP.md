@@ -557,7 +557,7 @@ To include the footer file in a page, use the include statement:
 </html>
 ```
 
-## Readfile Function
+## Read File and File Open Function
 
 The readfile() function reads a file and writes it to the output buffer. Prints out the txt file.
 
@@ -565,4 +565,70 @@ The readfile() function reads a file and writes it to the output buffer. Prints 
 <?php
 echo readfile("webdictionary.txt");
 ?>
+
+OR
+
+<?php
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("webdictionary.txt"));
+fclose($myfile);
+?>
 ```
+
+fread() and fclose() functions Reference
+
+[File Open](https://www.w3schools.com/php/php_file_open.asp)
+
+[File Create / Write ](https://www.w3schools.com/php/php_file_create.asp)
+
+---
+
+## Cookies / Sessions
+
+A cookie is often used to identify a user. A cookie is a small file that the server embeds on the user's computer. Each time the same computer requests a page with a browser, it will send the cookie too. With PHP, you can both create and retrieve cookie values. --> setcookie()
+
+---
+
+A session is a way to store information (in variables) to be used across multiple pages.
+
+Unlike a cookie, the information is not stored on the users computer.
+
+What is a PHP Session?
+When you work with an application, you open it, do some changes, and then you close it. This is much like a Session. The computer knows who you are. It knows when you start the application and when you end. But on the internet there is one problem: the web server does not know who you are or what you do, because the HTTP address doesn't maintain state.
+
+Session variables solve this problem by storing user information to be used across multiple pages (e.g. username, favorite color, etc). By default, session variables last until the user closes the browser.
+
+So; Session variables hold information about one single user, and are available to all pages in one application.
+
+Tip: If you need a permanent storage, you may want to store the data in a database. Note: The session_start() function must be the very first thing in your document. Before any HTML tags.
+
+---
+
+## PHP Filters
+
+Validating data = Determine if the data is in proper form.
+
+Sanitizing data = Remove any illegal character from the data.
+
+Many web applications receive external input. External input/data can be:
+
+- User input from a form
+
+- Cookies
+
+- Web services data
+
+- Server variables
+
+- Database query results
+
+You should always validate external data!
+Invalid submitted data can lead to security problems and break your webpage!
+By using PHP filters you can be sure your application gets the correct input!
+
+---
+
+##Exception Handling
+Exceptions are used to change the normal flow of a script if a specified error occurs.
+
+[Exceptions](https://www.w3schools.com/php/php_exception.asp)
