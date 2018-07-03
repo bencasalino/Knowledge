@@ -386,3 +386,41 @@ echo "2 + 4 = " . sum(2, 4);
 ---
 
 ## Arrays
+
+An array is a special variable, which can hold more than one value at a time.
+
+1.  Indexed arrays - Arrays with a numeric index
+
+```
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+?>
+```
+
+The count() function is used to return the length (the number of elements) of an array
+
+2.  Associative arrays - Arrays with named keys
+
+```
+<?php
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+echo "Peter is " . $age['Peter'] . " years old.";
+?>
+```
+
+3.  Multidimensional arrays - Arrays containing one or more arrays
+
+[Array Reference](https://www.w3schools.com/php/php_ref_array.asp)
+
+---
+
+## Date/Time/Calendar Functions
+
+[Calendar](https://www.w3schools.com/php/php_ref_calendar.asp)
+
+[Date/Time](https://www.w3schools.com/php/php_ref_date.asp)
+
+## Directory Functions
+
+[Directory](https://www.w3schools.com/php/php_ref_directory.asp)
