@@ -1,4 +1,4 @@
-#PHP
+# PHP
 
 - Open Source Server Side Scripting Language
 
@@ -628,7 +628,8 @@ By using PHP filters you can be sure your application gets the correct input!
 
 ---
 
-##Exception Handling
+## Exception Handling
+
 Exceptions are used to change the normal flow of a script if a specified error occurs.
 
 [Exceptions](https://www.w3schools.com/php/php_exception.asp)
