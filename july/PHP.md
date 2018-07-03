@@ -424,3 +424,145 @@ echo "Peter is " . $age['Peter'] . " years old.";
 ## Directory Functions
 
 [Directory](https://www.w3schools.com/php/php_ref_directory.asp)
+
+## Error Handling
+
+[Errors / Logging Constats / Runtime Config](https://www.w3schools.com/php/php_ref_error.asp)
+
+---
+
+## Filter Functions
+
+[Filter](https://www.w3schools.com/php/php_ref_filter.asp)
+
+---
+
+## FTP
+
+The FTP functions give client access to file servers through the File Transfer Protocol (FTP).
+
+The FTP functions are used to open, login and close connections, as well as upload, download, rename, delete, and get information on files from file servers. Not all of the FTP functions will work with every server or return the same results. The FTP functions became available with PHP 3.
+
+If you only wish to read from or write to a file on an FTP server, consider using the ftp:// wrapper with the Filesystem functions which provide a simpler and more intuitive interface.
+
+[FTP Functions](https://www.w3schools.com/php/php_ref_ftp.asp)
+
+---
+
+## PHP Global Variables - Superglobals
+
+Several predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special.
+
+The PHP superglobal variables are:
+
+$GLOBALS
+
+$\_SERVER
+
+$\_REQUEST
+
+$\_POST
+
+$\_GET
+
+$\_FILES
+
+$\_ENV
+
+$\_COOKIE
+
+$\_SESSION
+
+---
+
+```
+<?php
+$x = 75;
+$y = 25;
+
+function addition() {
+    $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
+}
+
+addition();
+echo $z;
+?>
+```
+
+In the example above, since z is a variable present within the $GLOBALS array, it is also accessible from outside the function!
+
+---
+
+$\_SERVER is a PHP super global variable which holds information about headers, paths, and script locations.
+
+$\_REQUEST is used to collect data after submitting an HTML form.
+
+```
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = htmlspecialchars($_REQUEST['fname']);
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+?>
+```
+
+---
+
+## Include / Require
+
+The include (or require) statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement.
+
+Including files is very useful when you want to include the same PHP, HTML, or text on multiple pages of a website.
+
+It is possible to insert the content of one PHP file into another PHP file (before the server executes it), with the include or require statement.
+
+The require statement is also used to include a file into the PHP code. However, there is one big difference between include and require; when a file is included with the include statement and PHP cannot find it, the script will continue to execute:
+
+The include and require statements are identical, except upon failure:
+
+- require will produce a fatal error (E_COMPILE_ERROR) and stop the script
+
+- include will only produce a warning (E_WARNING) and the script will continue
+
+footer.php file
+
+```
+<?php
+echo "<p>Copyright &copy; 1999-" . date("Y") . " W3Schools.com</p>";
+?>
+```
+
+To include the footer file in a page, use the include statement:
+
+```
+<html>
+<body>
+
+<h1>Welcome to my home page!</h1>
+<p>Some text.</p>
+<p>Some more text.</p>
+<?php include 'footer.php';?>
+
+</body>
+</html>
+```
+
+## Readfile Function
+
+The readfile() function reads a file and writes it to the output buffer. Prints out the txt file.
+
+```
+<?php
+echo readfile("webdictionary.txt");
+?>
+```
