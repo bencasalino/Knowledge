@@ -1,5 +1,7 @@
 # HTML5 Notes
 
+[HTML HOW TO MAKE... GUIDE](https://www.w3schools.com/howto/default.asp)
+
 ## Meta
 
 - `base` - Base URL for all relative URLs
