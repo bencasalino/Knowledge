@@ -12,3 +12,4 @@ WCAG 2.0, MySQL, PHP, Unix/Linux Shell
 ---
 
 [DevDocs.io](https://devdocs.io/)
+[Front End Masters Handbook](https://frontendmasters.com/books/front-end-handbook/2018/)
