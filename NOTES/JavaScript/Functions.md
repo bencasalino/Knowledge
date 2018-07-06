@@ -128,3 +128,9 @@ var a = function bar() {
     alert("hello!");
 })();
 ```
+
+---
+
+### A Single Thread
+
+The main JavaScript runtime is single threaded. Two functions can’t run at the same time. The runtime contains an Event Queue which stores a list of messages to be processed. There are no deadlocks, so there is no need to use locks. However, the code in the Event Queue needs to run fast. Otherwise the browser will become unresponsive and will ask to kill the task.
