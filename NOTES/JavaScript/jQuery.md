@@ -1,5 +1,7 @@
 # jQuery
 
+[You Don't Need jQuery](https://github.com/nefe/You-Dont-Need-jQuery)
+
 The jQuery library contains the following features:
 
 - HTML/DOM manipulation
