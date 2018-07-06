@@ -170,3 +170,23 @@ The some method is another higher-order function. It takes a test function and t
 Analogous to the some method, arrays also have an every method. This one returns true when the given function returns true for every element in the array. In a way, some is a version of the || operator that acts on arrays, and every is like the && operator.
 
 ---
+
+Difference between the postfix i++ and prefix ++i increment operators?
+
+Both increment the variable value by 1. The difference is what they evaluate to.
+
+The postfix increment operator evaluates to the value before it was incremented.
+
+```
+let i = 0
+i++ // 0
+// i === 1
+```
+
+The prefix increment operator evaluates to the value after it was incremented.
+
+```
+let i = 0
+++i // 1
+// i === 1
+```
