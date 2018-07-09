@@ -187,3 +187,33 @@ all, which applies to all media type devices
 print, which only applies to printers
 screen, which only applies to screens (desktops, tablets, mobile etc.)
 speech, which only applies to screenreaders
+
+---
+
+The rel="noopener" is an attribute used in <a> elements (hyperlinks). It prevents pages from having a window.opener property, which would otherwise point to the page from where the link was opened and would allow the page opened from the hyperlink to manipulate the page where the hyperlink is.
+
+- rel="noopener" is applied to hyperlinks.
+
+- rel="noopener" prevents opened links from manipulating the source page.
+
+--- \
+
+## defer vs async (on a script tag)
+
+- Defer --> The defer attribute downloads the script while the document is still parsing but waits until the document has finished parsing before executing it, equivalent to executing inside a DOMContentLoaded event listener. defer scripts will execute in order.
+
+Placing a **defer** script in the <head> allows the browser to download the script while the page is still parsing, and is therefore a better option than placing the script before the end of the body.
+
+- async --> The async attribute downloads the script during parsing the document but will pause the parser to execute the script before it has fully finished parsing. async scripts will not necessarily execute in order.
+
+- default behavior --> If neither attribute is present, the script is downloaded and executed synchronously, and will halt parsing of the document until it has finished executing (default behavior). Scripts are downloaded and executed in the order they are encountered.
+
+Summary:
+
+If the scripts rely on each other, use defer.
+
+If the script is independent, use async.
+
+Use defer if the DOM must be ready and the contents are not placed within a DOMContentLoaded listener.
+
+---
