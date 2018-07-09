@@ -60,7 +60,7 @@ Note how the filter function, rather than deleting elements from the existing ar
 
 **NOTE:** It does not modify the array it is given.
 
-Like forEach, filter is a standard array method. The example defined in the function only to show what it does internally. It does not return a new array it just replaces or updates the current array. For each eseentially replaces the for loop with different syntax.
+Like forEach, filter is a standard array method. The example defined in the function only to show what it does internally. It does not return a new array it just replaces or updates the current array. For each essentially replaces the for loop with different syntax.
 
 ---
 
@@ -190,3 +190,11 @@ let i = 0
 ++i // 1
 // i === 1
 ```
+
+---
+
+## map vs forEach
+
+Use forEach() if you need to iterate over an array and cause mutations to the elements without needing to return values to generate a new array.
+
+map() is the right choice to keep data immutable where each value of the original array is mapped to a new array.

@@ -70,6 +70,15 @@ What doesn't inherit:
 
 ### Specificity
 
+Assuming the browser has already determined the set of rules for an element, each rule is assigned a matrix of values, which correspond to the following from highest to lowest specificity:
+
+When two selectors are compared, the comparison is made on a per-column basis (e.g. an id selector will always be higher than any amount of class selectors, as ids have higher specificity than classes). In cases of equal specificity between multiple rules, the rules that comes last in the page's style sheet is deemed more specific and therefore applied to the element.
+
+Good to hear
+Specificity matrix: [inline, id, class/pseudo-class/attribute, tag/pseudo-element]
+
+In cases of equal specificity, last rule is applied
+
 - Tags = 1 point
 - Classes = 10 points
 - IDs = 100 points
@@ -418,7 +427,6 @@ prince- YesLogic
 
 ---
 
-
 ### Defining And Using CSS Variables
 
 Variables follow the same scope and inheritance rules like any other CSS definition.
@@ -515,3 +523,41 @@ It is possible to nest custom properties:
 --base-color: #f93ce9;
 --background-gradient: linear-gradient(to top, var(--base-color), #444);
 ```
+
+---
+
+# CSS Box Model
+
+Content: The inner-most part of the box filled with content, such as text, an image, or video player. It has the dimensions content-box width and content-box height.
+
+Padding: The transparent area surrounding the content. It has dimensions are padding-box width and padding-box height.
+
+Border: The area surrounding the padding (if any) and content. It has dimensions border-box width and border-box height.
+
+Margin: The transparent outer-most layer that surrounds the border. It separates the element from other elements in the DOM. It has dimensions margin-box width and margin-box height.
+
+---
+
+#em vs rem
+
+Both em and rem units are based on the font-size CSS property. The only difference is where they inherit their values from.
+
+- em units inherit their value from the font-size of the parent element
+
+* rem units inherit their value from the font-size of the root element (html)
+
+In most browsers, the font-size of the root element is set to 16px by default.
+
+---
+
+## Focus Ring
+
+A focus ring is a visible outline given to focusable elements such as buttons and anchor tags. It varies depending on the vendor, but generally it appears as a blue outline around the element to indicate it is currently focused.
+
+In the past, many people specified outline: 0; on the element to remove the focus ring. However, this causes accessibility issues for keyboard users because the focus state may not be clear. When not specified though, it causes an unappealing blue ring to appear around an element.
+
+In recent times, frameworks like Bootstrap have opted to use a more appealing box-shadow outline to replace the default focus ring. However, this is still not ideal for mouse users.
+
+**NOTE:** The best solution is an upcoming pseudo-selector :focus-visible which can be polyfilled today with JavaScript. It will only show a focus ring if the user is using a keyboard and leave it hidden for mouse users. This keeps both aesthetics for mouse use and accessibility for keyboard use.
+
+---

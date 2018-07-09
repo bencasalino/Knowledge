@@ -217,3 +217,11 @@ If the script is independent, use async.
 Use defer if the DOM must be ready and the contents are not placed within a DOMContentLoaded listener.
 
 ---
+
+## localStorage vs sessionStorage
+
+- Data stored through localStorage is permanent: it does not expire and remains stored on the user’s computer until a web app deletes it or the user asks the browser to delete it.
+
+- sessionStorage has the same lifetime as the top-level window or browser tab in which the data got stored. When the tab is permanently closed, any data stored through sessionStorage is deleted.
+
+---

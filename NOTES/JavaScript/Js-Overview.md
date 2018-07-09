@@ -183,3 +183,89 @@ Dynamic Typing / Weak Typing / Static Typing
 Type Enforcement
 
 ---
+
+## Statement vs Expression
+
+There are two main syntactic categories in JavaScript: expressions and statements. A third one is both together, referred to as an **expression statement** T
+
+- Expression: produces a value
+
+* Statement: performs an action
+*
+* Expression statement: produces a value and performs an action
+
+**NOTE:**
+
+```
+If you can print it or assign it to a variable, it’s an expression. If you can’t, it’s a statement.
+```
+
+- Statements
+
+```
+let x = 0
+
+function declaration() {}
+
+if (true) {
+}
+```
+
+Statements appear as instructions that do something but don't produce values.
+
+```
+// Assign `x` to the absolute value of `y`.
+var x
+if (y >= 0) {
+  x = y
+} else {
+  x = -y
+}
+```
+
+The only expression in the above code is y >= 0 which produces a value, either true or false. A value is not produced by other parts of the code.
+
+---
+
+- Expressions
+
+Expressions produce a value. They can be passed around to functions because the interpreter replaces them with the value they resolve to.
+
+```
+5 + 5 // => 10
+
+lastCharacter("input") // => "t"
+
+true === true // => true
+```
+
+---
+
+- Expression statements
+  There is an equivalent version of the set of statements used before as an expression using the conditional operator:
+
+```
+// Assign `x` as the absolute value of `y`.
+var x = y >= 0 ? y : -y
+```
+
+This is both an expression and a statement, because we are declaring a variable x (statement) as an evaluation (expression).
+
+---
+
+## ASI (automatic semicolon insertion)
+
+```
+function greet() {
+  return
+  {
+    message: "hello"
+  }
+}
+```
+
+Because of JavaScript's automatic semicolon insertion (ASI), the compiler places a semicolon after return keyword and therefore it returns undefined without an error being thrown.
+
+- Automatic semicolon placement can lead to time-consuming bugs
+
+---
