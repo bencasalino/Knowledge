@@ -32,6 +32,7 @@ WCAG 2.0, MySQL, PHP, Unix/Linux Shell
 [CSS Reference](https://cssreference.io/)
 [CSS Tricks Almanac](https://css-tricks.com/almanac/)
 [CSS Cheat Sheet](https://adam-marsden.co.uk/css-cheat-sheet)
+[Pseudo Classes Playground](https://css-playground.com/view/33/css_pseudo_classes_playground)
 
 ## DOM
 
