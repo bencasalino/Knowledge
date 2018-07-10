@@ -2,6 +2,10 @@ Organize these notes!
 https://medium.freecodecamp.org/the-vue-handbook-a-thorough-introduction-to-vue-js-1e86835d8446
 https://github.com/learn-vuejs/vue-patterns#string-template-or-es6-template-literal
 
+https://www.youtube.com/watch?v=Fa4cRMaTDUI <-- full stack express node VUE app
+
+https://ahackersday.com/blog/introduction-to-vuejs-props/
+
 Vue.js - Front End Framework Notes
 
 Resources/Tools/Setup/Install
