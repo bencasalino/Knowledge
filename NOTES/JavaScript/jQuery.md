@@ -20,6 +20,10 @@ In addition, jQuery has plugins for almost any task out there.
 
 The jQuery team knows all about cross-browser issues, and they have written this knowledge into the jQuery library. jQuery will run exactly the same in all major browsers.
 
+#### Importing the Script
+
+The **integrity and crossorigin** properties in the example ensure the file is delivered without any third-party manipulation.
+
 ---
 
 CDN

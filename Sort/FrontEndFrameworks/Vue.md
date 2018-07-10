@@ -1,5 +1,5 @@
 Organize these notes!
-
+https://medium.freecodecamp.org/the-vue-handbook-a-thorough-introduction-to-vue-js-1e86835d8446
 https://github.com/learn-vuejs/vue-patterns#string-template-or-es6-template-literal
 
 Vue.js - Front End Framework Notes
