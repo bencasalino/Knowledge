@@ -83,4 +83,64 @@ list-style-type: none;
 
 ---
 
-## Validators
+## Multiple Languages
+
+```
+//  can be used on any tag.
+<section lang="sp">
+  <h1> Me gusta la playa. </h1>
+</section>
+```
+
+---
+
+## Robots.txt file or Humans.txt
+
+[Resources](https://gist.github.com/prof3ssorSt3v3/d609482f5a681f7085d6bff84312da36)
+
+- File stays at root.
+
+```
+User-agent: *
+// allow all
+//
+
+Disallow: /img
+
+// what are the files you dont want to be indexed. use files names not folder names. Allows you to deny things showing up in search results.
+```
+
+Humans.txt - essentially credits for a site similar to a readme.md
+
+---
+
+## Open Graph Tags
+
+- Used for sharing via social media (usually go in the head tag)
+
+```
+// used by Facebook and Google
+<meta property="og:type" content="article">
+<meta property="og:title" content="Title of this page">
+<meta property="og:url" content="URL of this page">
+<meta property="og:site-name" content="name of your website">
+<meta property="og:image" content="url representing this article for example">
+<meta property="og:description" content="description of the page">
+```
+
+---
+
+```
+// used for Twitter only
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Title of this page">
+<meta name="twitter:url" content="URL of the page">
+<meta name="twitter:description" content="description of this page">
+<meta name="twitter:image" content="URL to an image representing this page">
+```
+
+---
+
+## Sitemap (XML)
+
+[Sitemap.xml Tutorial](https://www.youtube.com/watch?v=_CKevzKuZLc&list=PLyuRouwmQCjl8f_CEKfbNHipwMq-zQi2K&index=6)
