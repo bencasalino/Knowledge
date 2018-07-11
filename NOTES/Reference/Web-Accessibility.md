@@ -79,4 +79,8 @@ list-style-type: none;
 
 - Voiceover Utility and Router (Screenreader built into Mac)
 
+[Controlling Captions in vidoes with html/css](https://www.youtube.com/watch?v=DcWsUyhBykE&index=7&list=PLyuRouwmQCjlu6VexWFQNToJ3EaQUva1t)
+
 ---
+
+## Validators
