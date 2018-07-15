@@ -5,6 +5,9 @@
 [Front End Masters Handbook](https://frontendmasters.com/books/front-end-handbook/2018/)
 [Front End Tips](https://30secondsofinterviews.org/)
 [Autoprefixer](https://css-tricks.com/autoprefixer/)
+[JS Reference](https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md)
+[CSS Reference](https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/css-questions.md)
+[HTML Reference](https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/html-questions.md)
 
 ## JavaScript/jQuery
 
