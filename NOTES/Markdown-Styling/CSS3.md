@@ -615,3 +615,36 @@ NOTE: floats do NOT include the height of something when its floated. The workar
 ### Overflow: auto;
 
 If overflow: auto is set whatever the container then... backgrounds and borders will wrap around whatever is being floated.
+
+---
+
+Shorthands: (padding and margins)
+
+```
+10px 20px 30px 40 px // t r l b
+10px // all 4 sides
+10px 20px // tb lr
+10px 20px 30px // t rl b
+```
+
+## Font Stacks
+
+font-family: Arial, Verdana, serif
+
+Applied first
+
+1.  Arial
+2.  Verdana
+3.  serif
+
+---
+
+## @font-face
+
+WOFF - all browsers
+EOT - only IE 11 and earlier
+SVG - safari and ios
+TTF / OTF - all browsers plus IE 11+
+WOFF2 - not IE, Safari on ios and OSK Sierra+ (all other browsers since 2014/15/16)
+
+[cool position sticky tut ](https://www.youtube.com/watch?v=pYegv7O21Lo&list=PLyuRouwmQCjl4wTSNbb8RTKZuyMhoIxBe&index=26)
