@@ -104,7 +104,7 @@ Source Order in which they get applied.
 .test.test2 <-- must have ALL when chained with no space.
 ```
 
----
+## Note: for top and bottom margin, if 2 elements both have margin values the LARGER of the two will be applied
 
 #### Rules
 
@@ -568,6 +568,17 @@ Both em and rem units are based on the font-size CSS property. The only differen
 
 In most browsers, the font-size of the root element is set to 16px by default.
 
+```
+html {
+font-size:20px;
+}
+
+h1 {
+  font-size: 1rem; // 20px
+  font-size: 2rem; // 40px
+}
+```
+
 ---
 
 ## Focus Ring
@@ -581,3 +592,9 @@ In recent times, frameworks like Bootstrap have opted to use a more appealing bo
 **NOTE:** The best solution is an upcoming pseudo-selector :focus-visible which can be polyfilled today with JavaScript. It will only show a focus ring if the user is using a keyboard and leave it hidden for mouse users. This keeps both aesthetics for mouse use and accessibility for keyboard use.
 
 ---
+
+## Display (none) vs Visibility (hidden)
+
+Display will remove it from the page while visibility will maintain the space but not show it.
+
+## Floats
