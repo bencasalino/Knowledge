@@ -84,6 +84,26 @@ In cases of equal specificity, last rule is applied
 - IDs = 100 points
 - Inline style = 1000 points
 
+### Specificity Rules
+
+1.  Id's
+2.  Classes, pseudo-classes(a:hover), attribute selectors
+3.  Type selectors (elements, pseudo-elements(p::first-letter))
+
+0.4.2 --> .red .big p.one.two span {} --> 4 classes + 2 types
+1.1.1 --> #test p.first {} --> 1 id + 1 class + 1 type
+
+Source Order in which they get applied.
+
+1.  External
+2.  Embedded
+3.  Inline
+
+```
+.test .test2 {} <-- spaces between means we are drilling down to multiple levels.
+.test.test2 <-- must have ALL when chained with no space.
+```
+
 ---
 
 #### Rules
