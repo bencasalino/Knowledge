@@ -38,8 +38,8 @@
 - `:first-line` -
 - `:first-letter` -
 - `:focus` -
-- `:before {content: "..."}` -
-- `:after {content: "..."}` -
+- `:before {content: "..."}` - styles get injected right BEFORE the targeted element tag <h1>"HERE" text </h1>
+- `:after {content: "..."}` - <h1> text "HERE"</h1>
 - `::selection` -
 - `:not(...)` -
 
@@ -47,10 +47,17 @@
 
 - `:first-child` -
 - `:last-child` -
-- `:nth-child(odd | even | 3 | 3n + 4 )` ← Start counting at fourth
+- `:nth-child(odd | even | 3 | 3n + 4 )` ← Start counting at fourth (not zero indexed)
 - `:first-of-type` -
 - `:last-of-type` -
 - `:nth-of-type(...)` -
+
+Are used to target elements that you do not have direct access to (via a CMS for example) when you cannot add a class name or id to an element.
+
+- `:nth-child(n)` ← any positive integer
+- `:nth-child(3n)` ← target every 3rd element
+- `:nth-child(3n + 2)` ← target every 3rd element starting at position 2
+- `:nth-child(odd)` ← all odd numbers
 
 ---
 
@@ -598,3 +605,13 @@ In recent times, frameworks like Bootstrap have opted to use a more appealing bo
 Display will remove it from the page while visibility will maintain the space but not show it.
 
 ## Floats
+
+Floats - try to tell the browser you have something sitting inside a line of text (usually) that is bigger than the line of text.
+
+### Clears
+
+NOTE: floats do NOT include the height of something when its floated. The workaround is clear: left or right. This drop things down below it. Or use clear: both for left and right values. (makes sure that the element below it DOES NOT start until it has CLEARED whatever thing is being floated.)
+
+### Overflow: auto;
+
+If overflow: auto is set whatever the container then... backgrounds and borders will wrap around whatever is being floated.
