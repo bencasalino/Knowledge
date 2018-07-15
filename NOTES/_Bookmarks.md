@@ -14,7 +14,7 @@
 [JSON Transform](https://github.com/transform-it/transform-www)
 [Trending Repos](https://bestofjs.org/)
 [Practical JavaScript](https://watchandcode.com/courses/enrolled/60264)
-[jQuery Fundementals](http://jqfundamentals.com/)
+[jQuery Fundamentals](http://jqfundamentals.com/)
 
 ## HTML
 
