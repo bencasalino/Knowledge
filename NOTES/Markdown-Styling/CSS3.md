@@ -201,7 +201,7 @@ Source Order in which they get applied.
   - `border-radius: top-left top-right bottom-right bottom-left` -
     - Can do `height / width` for elliptical shape
 - `box-shadow: h-offset v-offset radius spread color` -
-- `box-sizing: content-box | padding-box | border-box` (what do h/w refer to)
+- `box-sizing: content-box | padding-box | border-box` --> Resets the box-model so that widths and heights are not affected by their borders or padding. Meaning if you add a border or 20px it is not considered part of of the overall total?
 - `overflow: visible | scroll | auto | hidden` -
 - `height` / `width` -
 - `min-height` / `max-height` -
@@ -609,6 +609,10 @@ Display will remove it from the page while visibility will maintain the space bu
 Floats - try to tell the browser you have something sitting inside a line of text (usually) that is bigger than the line of text.
 
 ### Clears
+
+[Clearfix](https://atomiks.github.io/30-seconds-of-css/#clearfix)
+
+## Clearfix
 
 NOTE: floats do NOT include the height of something when its floated. The workaround is clear: left or right. This drop things down below it. Or use clear: both for left and right values. (makes sure that the element below it DOES NOT start until it has CLEARED whatever thing is being floated.)
 
